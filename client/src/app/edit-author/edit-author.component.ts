@@ -8,10 +8,11 @@ import { HttpService } from '../http.service';
   styleUrls: ['./edit-author.component.css']
 })
 export class EditAuthorComponent implements OnInit {
-authorId= '';
+authorId = '';
 editAuthor = {
   name: ''
 };
+errors = '';
 
   constructor(
     private _httpService: HttpService,
@@ -40,7 +41,7 @@ editAuthor = {
     this._httpService.editAuthor(this.authorId, this.editAuthor).subscribe(data => {
       console.log(data);
       this._router.navigate(['/authors']);
-    })
+    });
   }
 
 }

@@ -29,7 +29,7 @@ const authorSchema = new Schema({
         type: String,
         trim: true,
         required: [true, 'Author name is required'],
-        minlength: [5, 'Author name must be greater than 5 characters'],
+        minlength: [3, 'Author name must be greater than 3 characters'],
         unique: true
     }
 }, { timestamps: true });
