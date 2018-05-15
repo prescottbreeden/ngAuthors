@@ -2,11 +2,11 @@
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Edit this author</h4>
+          <h4 class="card-title">Add author - {{ editAuthor.name }}</h4>
           <div class="flex-this">
             <label for="authorName">Author Name:</label>
-            <input type="text" name="authorName" [(ngModel)]="currentAuthor">
-            <button class="btn btn-primary">Edit Author</button>
+            <input type="text" name="authorName" [(ngModel)]="editAuthor.name">
+            <button class="btn btn-primary" (click)="editAuthorService()">Edit Author</button>
           </div>
         </div>
       </div>

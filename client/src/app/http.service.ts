@@ -10,26 +10,26 @@ export class HttpService {
   }
 
   getAllAuthor() {
-    return this._http.get('/authors');
+    return this._http.get('/api/authors');
   }
 
   getAuthor(id) {
-    return this._http.get(`/authors/${id}`);
+    return this._http.get(`/api/authors/${id}`);
   }
 
   createAuthor(newAuthor) {
-    return this._http.post('/authors/', newAuthor);
+    return this._http.post('/api/authors/', newAuthor);
   }
 
-  updateAuthor(id: string, editedAuthor) {
-    return this._http.put(`/authors/${id}`, editedAuthor);
+  editAuthor(id: string, editedAuthor) {
+    return this._http.put(`/api/authors/${id}`, editedAuthor);
   }
 
   completeAuthor(id: string, completedAuthor) {
-    return this._http.put(`/authors/${id}`, completedAuthor);
+    return this._http.put(`/api/authors/${id}`, completedAuthor);
   }
 
   deleteAuthor(id: string) {
-    return this._http.delete(`/authors/` + id);
+    return this._http.delete(`/api/authors/` + id);
   }
 }

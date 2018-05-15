@@ -16,7 +16,11 @@ export class AppComponent {
     this._route.params.subscribe((params: Params) => console.log(params['id']));
   
   }
+
   goHome() {
-    this._router.navigate(['/home']);
+    this._router.navigate(['/author']);
+  }
+  goSubmitAuthor() {
+    this._router.navigate(['/author/new']);
   }
 }

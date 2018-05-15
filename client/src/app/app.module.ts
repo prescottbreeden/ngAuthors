@@ -9,6 +9,8 @@ import { ShowAuthorComponent } from './show-author/show-author.component';
 import { NavComponent } from './nav/nav.component';
 import { HttpService } from './http.service';
 import { AppRoutingModule } from './app-routing.module';
+import { TeapotComponent } from './teapot/teapot.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { AppRoutingModule } from './app-routing.module';
     SubmitAuthorComponent,
     EditAuthorComponent,
     ShowAuthorComponent,
-    NavComponent
+    NavComponent,
+    TeapotComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [HttpService],

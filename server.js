@@ -53,8 +53,10 @@ const authorController = {
             .catch(error => response.json( {message: "error", errors: error}));
     },
     create: (request, response) => {
-  
-        Author.create(request.body)
+        const newAuthor = new Author({
+            name: request.body.name
+        })
+        Author.create(newAuthor)
             .then(author => response.json( {message: "success", data: author} ))
             .catch(error => response.json( {message: "error", errors: error} ));
   
